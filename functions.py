@@ -4,7 +4,6 @@ import cv2
 from tkinter import filedialog
 from scipy.ndimage import convolve
 
-
 # Resizes image with factor scale_percent
 def resize_img(matrix, scale_percent):
     # Decreases intensity to view image on 8-bit screen

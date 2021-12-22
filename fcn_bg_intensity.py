@@ -10,7 +10,6 @@ def fcn_bg_intensity(matrix, stepsize):
 
     x_coordinates = []
     y_coordinates = []
-    # Determine spots in small area
     xpos = stepsize
     ypos = stepsize
     sum = 0
@@ -23,9 +22,7 @@ def fcn_bg_intensity(matrix, stepsize):
                 for y in range(ypos-stepsize,ypos):
                     sum += matrix[y][x]
 
-
             bg_intensity = sum/(stepsize*stepsize)
-            img_std = std(matrix)
 
             # Remove background noise
             for x in range(xpos-stepsize,xpos):
@@ -33,14 +30,13 @@ def fcn_bg_intensity(matrix, stepsize):
                     if matrix[y][x] >= 2*bg_intensity:
                         x_coordinates.append(x)
                         y_coordinates.append(y)
-                    else:
-                        matrix[y][x] = 0
+                    #else:
+                        #matrix[y][x] = 0
         
             xpos += stepsize
             sum = 0
 
         ypos += stepsize
         xpos = stepsize
-
    
-    return matrix, x_coordinates, y_coordinates
+    return x_coordinates, y_coordinates
