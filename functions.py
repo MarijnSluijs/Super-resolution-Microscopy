@@ -1,8 +1,7 @@
 # Import libraries
-import numpy as np
 import cv2
+import numpy as np
 from tkinter import filedialog
-from scipy.ndimage import convolve
 
 # Resizes image with factor scale_percent
 def resize_img(matrix, scale_percent):
@@ -24,22 +23,4 @@ def std(matrix):
     std = np.std(list)
 
     return std
-
-# Save image to disk
-def savefile():
-    filename = filedialog.asksaveasfile(mode='wb', defaultextension=".tif")
-    if not filename:
-        return
-    img.save(filename)
-
-# Segmentation of spots
-def segmentation(matrix, x, y):
-    num_spots = len(x)
-    segments = []
-    for i in range(0,num_spots):
-        segments.append(matrix[y[i]-4:y[i]+5, x[i]-4:x[i]+5])
-        
-        #print(segments[i])
-
-    return segments
 

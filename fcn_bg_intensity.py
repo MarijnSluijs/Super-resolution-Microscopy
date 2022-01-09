@@ -6,7 +6,7 @@ from scipy.ndimage import convolve
 from functions import *
 
 # Returns matrix with spots, background is removed.
-def fcn_bg_intensity(matrix, stepsize):
+def fcn_bg_intensity(matrix, img_height, stepsize):
 
     x_coordinates = []
     y_coordinates = []
@@ -14,8 +14,8 @@ def fcn_bg_intensity(matrix, stepsize):
     ypos = stepsize
     sum = 0
 
-    for y_shift in range(0,int(256/stepsize)):
-        for x_shift in range(0,int(256/stepsize)):
+    for y_shift in range(0,int(img_height/stepsize)):
+        for x_shift in range(0,int(img_height/stepsize)):
 
             # Determine background intensity in small area
             for x in range(xpos-stepsize,xpos):
