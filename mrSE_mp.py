@@ -5,11 +5,11 @@ import ctypes as c
 import cv2
 import timeit
 from PIL import Image
-from fcn_mrSE import *
+from functions.fcn_mrSE import *
 from functions import *
-from fcn_segmentation import *
-from fcn_bg_intensity import *
-from fcn_removecoords import *
+from functions.fcn_segmentation import *
+from functions.fcn_bg_intensity import *
+from functions.fcn_removecoords import *
 np.seterr(divide='ignore', invalid='ignore')
 
 def mrSE(n):
@@ -18,13 +18,13 @@ def mrSE(n):
 
     # Training data
     #img_matrix = cv2.imread('Tubulins_I/'+str(n).zfill(5)+'.tif', cv2.IMREAD_UNCHANGED)
-    #added_matrix = np.zeros((1280,1280))
+    #added_matrix = np.zeros((1280,1280),dtype='uint8')
     #img_height = 256
     #stepsize = 16
 
     # Test data
     img_matrix = cv2.imread('Tubulins_SOFI/'+str(n)+'.tif', cv2.IMREAD_UNCHANGED)
-    added_matrix = np.zeros((2500,2500))
+    added_matrix = np.zeros((2500,2500),dtype='uint8')
     img_height = 500
     stepsize = 20
 
@@ -42,9 +42,10 @@ def mrSE(n):
     y_img_lst = np.add(np.multiply(new_y,5),2+np.multiply(y_lst,-5)).astype(int)
 
     for i in range(0,len(x_lst)):
-        added_matrix[y_img_lst[i]][x_img_lst[i]]=255
+        added_matrix[y_img_lst[i]][x_img_lst[i]]=1
 
     return added_matrix
+    #return np.vstack((x_lst, y_lst))
     
 
 
@@ -52,7 +53,7 @@ if __name__ == '__main__':
     pool = mp.Pool(processes=8)
     start = timeit.default_timer()
 
-    results = pool.map(mrSE, range(1,48))
+    results = pool.map(mrSE, range(1,100))
     pool.close()
     pool.join()
 

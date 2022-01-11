@@ -3,11 +3,11 @@ import cv2
 import timeit
 import numpy as np
 from PIL import Image
-from fcn_mrSE import *
+from functions.fcn_mrSE import *
 from functions import *
-from fcn_bg_intensity import *
-from fcn_removecoords import *
-from fcn_segmentation import *
+from functions.fcn_bg_intensity import *
+from functions.fcn_removecoords import *
+from functions.fcn_segmentation import *
 
 np.seterr(divide='ignore', invalid='ignore')
 
