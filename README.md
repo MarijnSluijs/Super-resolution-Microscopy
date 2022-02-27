@@ -16,6 +16,7 @@ Simulated data to train on:
 Real 2D data:  
 [Tubulins 2D](https://srm.epfl.ch/DatasetPage?name=Tubulin-COS7-Flip565-2D)
 
-Two images from the simulated dataset:
-https://github.com/MarijnSluijs/Super-resolution-Microscopy/tree/main/images
-![alt text](https://github.com/MarijnSluijs/Super-resolution-Microscopy/tree/main/images/00001.jpg)
+Two images from the simulated dataset:  
+![image1](images/00001.jpg)
+![image2](images/00262.jpg)
+![image3](images/00518.jpg)
