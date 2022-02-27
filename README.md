@@ -4,7 +4,7 @@ Names: Jaap ter Meulen, Niels van Mierlo and Marijn Sluijs
 
 <img src="images/frontimage.jpg" width="500" height="500" />
 With modern optical technology it is possible to create images of nanometer resolution, 
-much smaller than the wavelength of light. One form of super-resolution microscopy is Single Molecule Localization Microscopy. Individual fluorescent molecules are
+much smaller than the wavelength of light. One form of super-resolution microscopy is Single Molecule Localization Microscopy (SMLM). Individual fluorescent molecules are
 localized using imaging and computer analysis of the emerging light spot of the molecule. Using algorithms, the location of the molecule can be determined on subpixel level.
 
 ## Dataset
@@ -17,7 +17,7 @@ Simulated data to train on:
 Real 2D data:  
 [Tubulins 2D](https://srm.epfl.ch/DatasetPage?name=Tubulin-COS7-Flip565-2D)
 
-The simulated datasets both consist of 2400 microscopic images of 8 tubulins (protein structures), the real 2D dataset consists of 8000 images of high-density tubulins.
+The simulated datasets both consist of 2400 microscopic images of 8 tubulins (protein structures). The real 2D dataset consists of 8000 images of high-density tubulins.
 
 Three images from the simulated dataset (Tubulins I):  
 ![image1](images/00001.jpg)
@@ -39,6 +39,6 @@ Super-resolution image created with dataset Tubulins 2D:
 <img src="images/frontimage.jpg" width="700" height="700" />
 
 ## Comparison
-The pixel size of the images in dataset Tubulins 2D is 108 nm. For the super-resolution image we zoomed in 5 times, giving a pixel size of 22 nm.
+The pixel size of the images in dataset Tubulins 2D is 108 nm. For the super-resolution image we zoomed in 5 times, giving a pixel size of 22 nm. All lightspots in the images from the dataset were added into an image to compare with the super-resolution image. The white lines are the tubulins that would have been seen by a normal light microscope, the pink lines are the tubulins created by the algorithm. This shows the nanometer resolution of super-resolution microscopy.
 
-<img src="images/images_compared_zoomed.png" width="400" height="400" />
+<img src="images/images_compared_zoomed.PNG" width="400" height="400" />
