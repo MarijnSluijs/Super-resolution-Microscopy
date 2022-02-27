@@ -18,4 +18,4 @@ Real 2D data:
 
 Two images from the simulated dataset:
 https://github.com/MarijnSluijs/Super-resolution-Microscopy/tree/main/images
-![alt text](https://github.com/MarijnSluijs/Super-resolution-Microscopy/tree/main/images/00001.jpg?raw=true)
+![alt text](https://github.com/MarijnSluijs/Super-resolution-Microscopy/tree/main/images/00001.jpg)
