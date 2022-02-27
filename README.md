@@ -9,9 +9,9 @@ localized using imaging and computer analysis of the emerging light spot of the 
 ## Dataset
 The following datasets are used in the super-resolution microscopy project:
 
-Simulated data to train on:
-https://srm.epfl.ch/DatasetPage?name=Tubulins_I 
-https://srm.epfl.ch/DatasetPage?name=Tubulins_II 
+Simulated data to train on:  
+[Tubulins I](https://srm.epfl.ch/DatasetPage?name=Tubulins_I)  
+[Tubulins II](https://srm.epfl.ch/DatasetPage?name=Tubulins_II) 
  
 Real 2D data
-https://srm.epfl.ch/DatasetPage?name=Tubulin-COS7-Flip565-2D
+[Tubulins 2D](https://srm.epfl.ch/DatasetPage?name=Tubulin-COS7-Flip565-2D)
