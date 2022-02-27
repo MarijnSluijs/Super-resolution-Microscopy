@@ -1,3 +1,6 @@
+# tif_to_folder.py
+
+# This file converts a TIF file consisting of multiple images to a folder with all its images
 from PIL import Image
 import numpy as np
 
